@@ -3,11 +3,19 @@ import Titulo from '../Titulo'
 
 import { Card, LinkBotao } from './styles'
 
-const Projeto = () => (
+interface ProjetoProps {
+  titulo: string
+  descricao: string
+  link: string
+}
+
+const Projeto: React.FC<ProjetoProps> = ({ titulo, descricao, link }) => (
   <Card>
-    <Titulo>Projeto Lista de tarefas</Titulo>
-    <Paragrafo tipo="secundario">Lista de tarefas feita com Vuejs</Paragrafo>
-    <LinkBotao>Visualizar</LinkBotao>
+    <Titulo>{titulo}</Titulo>
+    <Paragrafo tipo="secundario">{`Tecnologia: ${descricao}`}</Paragrafo>
+    <LinkBotao target="_blank" href={link}>
+      Visualizar
+    </LinkBotao>
   </Card>
 )
 
