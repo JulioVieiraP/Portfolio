@@ -1,4 +1,4 @@
-const FetchApi = async () => {
+export const FetchApi = async () => {
   const response = await fetch(
     'https://api.github.com/users/JuliovieiraP/repos'
   )
@@ -6,4 +6,8 @@ const FetchApi = async () => {
   return Data
 }
 
-export default FetchApi
+export const AvatarApi = async () => {
+  const response = await fetch('https://api.github.com/users/JuliovieiraP')
+  const Data = await response.json()
+  return Data
+}

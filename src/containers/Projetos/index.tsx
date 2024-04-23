@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Projeto from '../../components/ListaProjetos'
 import Titulo from '../../components/Titulo'
 import { Lista } from './styles'
-import FetchApi from '../../api/api'
+import { FetchApi } from '../../api/api'
 
 const Projetos = () => {
   type RepoType = {
